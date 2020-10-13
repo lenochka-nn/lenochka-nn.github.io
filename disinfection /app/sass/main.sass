@@ -1,0 +1,799 @@
+@import "fonts" // импортирует шрифты
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: rgba(45, 45, 45, 0.47)
+	opacity: 1
+  font-size: 18px
+
+*:-moz-placeholder
+	color: rgba(45, 45, 45, 0.47)
+	opacity: 1
+  font-size: 18px
+
+*::-moz-placeholder
+	color: rgba(45, 45, 45, 0.47)
+	opacity: 1
+  font-size: 18px
+
+*:-ms-input-placeholder
+	color: rgba(45, 45, 45, 0.47)
+	opacity: 1
+  font-size: 18px
+*
+  text-decoration: none !important
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+input, button, a
+  &:active, &:hover, &:focus 
+    outline: 0
+    outline-offset: 0
+a:active,
+a:hover, 
+a
+  text-decoration: none;
+  color: $dark
+
+
+.button
+  height: 58px
+  display: inline-block
+  border: none
+  color: #fff
+  text-decoration: none
+  background-color: $green
+  padding: 15px
+  font-size: 15px
+  text-transform: uppercase
+  font-weight: 900
+  letter-spacing: .38px
+  border-radius: 10px
+  text-align: left
+  position: relative
+  outline: none
+  box-shadow: 0 0 6.6px 0.4px rgba(29, 29, 29, 0.58)
+  transition: background-color .1s ease
+  cursor: pointer
+  &:active, &:focus, &:hover
+    outline: none
+  &::after
+    transition: background-color .2s ease
+    position: absolute
+    content: ''
+    bottom: 0
+    width: 100%
+    background-color: darken($green, 50%)
+    opacity: .18
+    border-bottom-left-radius: 2px
+    border-bottom-right-radius: 2px
+    left: 0
+  &:focus, &:hover
+    text-decoration: none
+    color: #fff
+  &:hover
+    background-color: lighten($green, 5%)
+    &::after
+      opacity: .22
+  &:active
+    background-color: darken($green, 5%)
+    &::after
+      opacity: .32
+
+.h1, .h2, .h3, .h4, .h5, .h6 
+	line-height: 1.4
+	text-transform: uppercase
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+section, header
+	position: relative
+	background-size: cover
+	background-position: center
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.logo
+  display: inline-block
+  font-size: 35px
+  font-weight: 900
+  color: $dark
+  line-height: 1.39
+  letter-spacing: 0.9px
+  text-align: left
+  span
+    color: $accent
+
+.site-header
+  min-height: 700px
+  height: 100vh
+.top-line 
+  position: relative
+  width: 100%
+  padding-top: 17px
+  .right
+    position: absolute
+    display: inline-block
+    right: 0
+    .tel-right
+     display: inline-block
+     vertical-align: middle
+     img
+       margin-top: 4px
+       width: 23px
+       height: 37px
+    a
+      color: $dark
+    .tel
+      margin-left: 5px
+      font-size: 30px
+      font-weight: 900
+      text-align: right
+      white-space: nowrap
+      border-bottom: 2px solid $dark
+      position: relative
+      line-height: 1.39
+      letter-spacing: 0.9px
+      span
+        color: $accent
+      &::before
+        position: absolute
+        content: ""
+        height: 2px
+        width: 80px
+        bottom: -2px
+        left: 0
+        background: $accent
+    .work-all
+      margin-left: 20px
+      display: inline-block
+      font-style: italic
+      font-size: 16px
+      font-weight: 900
+      background: $green
+      color: #f5f5f5
+      padding: 10px 12px 
+      letter-spacing: 0.4px
+      border-radius: 10px;
+      box-shadow: 0 0 6.6px 0.4px rgba(29, 29, 29, 0.58)
+.header-center  
+  &-text
+    margin-top: 80px
+    text-transform: uppercase
+    font-size: 36px
+    font-weight: 900
+    line-height: 1.39
+    letter-spacing: 0.9px
+    text-align: left
+    span
+      color: $green
+      &.italic
+        color: $dark
+        font-style: italic
+  .face
+    margin-top: 50px
+    position: relative
+    width: 380px
+    height: 50px
+    border-radius: 10px
+    box-shadow: 0px 1px 5.4px 0.6px rgba(29, 29, 29, 0.08)
+    background-color: #ededed
+    padding: 15px
+    img
+      position: absolute
+      bottom: 10px
+    p
+      margin: 0
+      font-weight: 500
+      line-height: 1.35
+      letter-spacing: 0.39px
+      line-height: 50px
+      padding-left: 50px
+      font-size: 15.5px
+      position: absolute
+      bottom: 0
+  .question
+    width: 370px
+    height: 90px
+    margin-top: 35px
+    background: url(../img/arrow.png) no-repeat right top 10px
+    .l1
+      font-size: 22px
+      font-weight: 600
+      line-height: 0.95
+      letter-spacing: 0.55px
+      text-transform: uppercase
+      span
+        color: $accent
+    .l2 
+      line-height: 1.4
+      letter-spacing: .56px 
+      color:#8a8a8a  
+      font-size: 22.5px
+      font-weight: 900   
+.callback
+  input
+    background: url(../img/tel-gray.png) no-repeat 20px
+    padding-left: 65px
+    width: 235px
+    height: 58px
+    border-radius: 10px
+    border: none
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    display: inline-block
+    background-color: #fff
+  button
+    width: 235px
+    vertical-align: middle
+    z-index: 1
+    img
+      margin-top: -8.5px
+    p
+      padding-left: 8px
+      margin-top: 3px
+  .success
+    display: none
+.s-sale
+  margin-top: 180px
+.helmet
+  position: relative
+  border-radius: 10px
+  box-shadow: 0 0 6.6px 0.4px rgba(29, 29, 29, 0.58)
+  background-color: $accent
+  height: 137px
+  img
+    width: 44%
+    position: absolute
+    bottom: -90px
+    left: -190px 
+  p
+    font-size: 70.5px
+    text-transform: uppercase
+    line-height: 137px
+    letter-spacing: 1.76px
+    color: #ffffff
+    font-weight: 900
+    padding-left: 275px
+.benefit
+  margin-top: 100px
+  width: 100%
+  height: auto
+  position: relative
+  .clock, .clock-2
+    width: 38%
+    padding-top: 45px
+    padding-left: 10px
+  .bug
+    position: absolute
+    right: 0
+    top: 0
+    width: 57%
+    p
+      line-height: 1.39
+      letter-spacing: 0.9px
+      font-weight: 900
+      font-size: 36px
+      span
+        text-transform: uppercase
+        color: $accent
+        font-style: italic
+        &.bot-line
+          border-bottom: 2px solid $accent
+.sale-callback
+  position: relative
+  margin-top: 60px
+  .sale-list
+    width: 45%
+    height: 145px
+    background: url(../img/arrow2.png) no-repeat bottom right
+  .callback
+    position: absolute
+    right: 0
+    top: 0
+    width: 57%
+    button
+      width: 265px
+ul 
+  list-style-image: url(../img/point.png)
+  li
+    line-height: 1.2em
+    letter-spacing: 0.5px
+    font-size: 20px
+    font-weight: 900
+    color: $dark 
+    span 
+      position: relative
+      top: -8px     
+.flip-clock-wrapper ul
+  width: 50px
+  height: 75px
+  li
+    line-height: 75px
+.flip-clock-wrapper
+  font-size: 18px
+  font-weight: 900
+.flip-clock-wrapper ul li a div div.inn 
+    font-size: 65px
+.s-service
+  background: url(../img/bg-services.png)no-repeat center
+  background-size: cover
+  margin-top: 70px
+  text-align: center
+  .title-service
+    font-weight: 900
+    font-size: 80px
+    font-style: italic
+  .mini-title
+    margin-top: 20px
+    margin-bottom: 30px
+    font-size: 20px
+    font-weight: 500
+    font-style: italic
+    line-height: 1.2
+    letter-spacing: 0.5px
+  .service-block
+    border-radius: 10px
+    box-shadow: 0px 5px 7.5px 1.5px rgba(29, 29, 29, 0.58)
+    border: solid 5.1px #d31952
+    background-color: #ffffff
+    margin-top: 40px
+    height: 152px
+    padding: 15px 0 15px 15px
+    position: relative
+    .h4
+      font-size: 21px
+      font-weight: 900
+      line-height: 0.9
+      letter-spacing: 0.53px
+      text-align: left
+      margin-bottom: 15px
+      text-transform: uppercase
+    p
+      font-size: 20px
+      font-weight: 900
+      line-height: 0.9
+      letter-spacing: 0.5px
+      text-align: left
+      color: #cfcfcf
+      text-transform: uppercase
+    .button
+      width: 187px
+      height: 36px
+      padding: 0
+      left: 0
+      margin-top: 25px
+      display: block
+      p
+        line-height: 36px
+        font-size: 12px
+        color: #fff
+        text-align: center
+    img
+      position: absolute  
+      right: 15px
+      bottom: 15px  
+  .service-img-2  
+    display: none
+.popup
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+ 	bottom: 0
+ 	right: 0
+ 	z-index: 10
+  background-color: rgba(0, 0, 0, 0.5)
+  .popup-content
+    border-radius: 10px
+    width: 650px
+    position: fixed
+    left: 50%
+    top: 7%
+    transform: translate(-50%)
+    padding: 2rem
+    background-color: $yellow
+    .popup-close
+      position: absolute
+      top: 10px
+      right: 10px
+      background: transparent
+      border: none
+      outline: none
+      cursor: pointer
+    .helmet
+      margin-top: 50px
+      position: relative
+      border-radius: 10px
+      box-shadow: 0 0 6.6px 0.4px rgba(29, 29, 29, 0.58)
+      background-color: $accent
+      height: 100px
+      width: 82%  
+      float: right
+      padding: 10px
+      img
+        width: 35%
+        position: absolute
+        bottom: -20px
+        left: -110px
+      p
+        font-size: 28.5px 
+        letter-spacing: 0.85px
+        text-transform: uppercase
+        color: #fff
+        font-weight: 900
+        padding-left: 20px
+        line-height: 1.2
+        font-style: italic
+        text-align: center
+        span
+          font-size: 44px
+    .polici
+      font-size: 22px
+      line-height: 1.4
+      letter-spacing: 0.63px
+      text-align: center
+      margin-top: 30px
+    .popup-header
+      text-transform: uppercase
+      margin-top: 40px
+      font-size: 40px
+      font-style: italic
+      text-align: center
+      line-height: 1
+      letter-spacing: 1.2px
+      color: $accent
+      font-weight: 900
+      span
+        color: $dark
+        font-size: 28.5px
+        letter-spacing: 0.86px
+        font-style: normal
+    .callback
+      margin-top: 50px
+      text-align: center
+      input
+        width: 433px
+        background-position: 20px 
+        padding-left: 65px
+        font-size: 25px
+        height: 70px
+      button
+        width: 433px
+        height: 70px
+        margin-top: 20px
+        p
+          padding-left: 8px
+          margin-top: 2px
+          font-size: 25px
+          font-weight: 800
+        img
+          margin-top: 0
+.s-work
+  margin-top: 100px
+  position: relative
+  text-align: right
+  .callback
+    height: auto
+    background: url(../img/maps.png) no-repeat bottom
+    height: 260px
+    position: relative
+    z-index: 9999999
+    padding-top: 160px
+    margin-top: -160px
+  .girl
+    position: absolute
+    top: -20px
+    left: 0
+    z-index: 2
+    width: 80%  
+  .work-title
+    .logo
+      font-size: 61px
+      text-transform: uppercase
+    p
+      font-size: 34.5px
+      font-weight: 900
+      line-height: 1.39
+      letter-spacing: 0.86px
+      color: #6a6a6a
+      margin-top: -10px
+      margin-bottom: 70px
+  ul li
+    text-align: left
+    p
+      font-style: italic
+      font-weight: 400
+.accent
+  top: 0
+  color: $accent
+.s-step
+  margin-top: 100px
+  .block-step
+    text-align-last: left
+    display: block
+    .number
+      display: inline-block
+      color: $accent
+      font-size: 164.5px
+      font-weight: 900
+      font-stretch: normal
+      font-style: italic
+      line-height: 1.2
+      letter-spacing: 4.11px
+      width: 200px
+    .step-text
+      display: inline-block
+      font-size: 30px
+      font-weight: 900
+      font-style: italic
+      line-height: 1
+      letter-spacing: 0.75px
+      width: 380px
+      padding-left: 15px
+  .men
+    position: absolute
+    right: 0
+    top: 0
+    z-index: -1
+  .offer
+    font-size: 30px
+    font-weight: 900
+    font-style: italic
+    line-height: 1
+    letter-spacing: 0.75px
+    width: 630px
+    height: 200px
+    background: url(../img/big-arrow.png) no-repeat top right
+    padding-top: 100px
+  .offer-callback
+    width: 100%
+    border-radius: 10px
+    background-color: $accent
+    padding: 15px
+    position: relative
+    &-text
+      display: inline-block
+      font-size: 25px
+      font-style: italic
+      font-weight: 500
+      line-height: 1
+      letter-spacing: 0.75px
+      color: #fff
+      span
+        font-weight: 900
+    .callback
+      display: inline-block
+      position: absolute
+      right: 15px
+      input
+        width: 228px
+      button
+        width: 228px
+        p
+          margin-top: -8px
+.title
+  text-align: center
+  text-transform: uppercase
+  font-size: 80px
+  font-weight: 900
+  font-style: italic
+  line-height: 0.9
+  letter-spacing: 2px
+  margin-bottom: 80px
+.s-foto
+  margin-top: 100px
+  .popup-link
+    .bg
+      background-color: $accent
+      height: 225px
+      border-radius: 10px 
+      margin-bottom: 20px
+      border: none
+    img
+      width: 105%
+      height: 240px
+      position: relative
+      left: -16px
+      bottom: 16px
+.s-feedback
+  margin-top: 100px
+  .slider-item
+    outline: none
+.slick-arrow
+  background: url(../img/slider-btn.png)no-repeat center
+  width: 42px
+  height: 42px
+  border: none
+  &:active, &:focus, &:hover
+    outline: none
+.prev, .next
+  position: absolute
+  z-index: 999
+  top: 40px
+.prev
+  left: -100px
+.next
+  right: -100px
+.slider
+  position: relative
+  .slider-item
+    p
+      padding-left: 10px
+      font-size: 18px
+      font-style: italic
+    span
+      padding-left: 10px
+      text-transform: uppercase
+      font-weight: bold
+  .slick-dots
+    text-align: center
+    li
+      display: inline-block
+      width: 20px
+      height: 20px
+      margin: 0 5px
+      padding: 0
+      cursor: pointer
+      text-align: center
+      color: transparent
+      &.slick-active
+        button
+          &:before
+            opacity: 1
+      button
+        position: relative
+        font-size: 0
+        line-height: 0
+        border: none
+        width: 20px
+        height: 20px
+        padding: 5px
+        cursor: pointer
+        background: transparent
+        outline: none
+        &::before
+          position: absolute
+          font-size: 35px;
+          line-height: 20px;
+          top: 0px
+          left: 0px
+          width: 20px
+          height: 20px
+          content: "•"
+          text-align: center
+          opacity: .25
+          color: black
+.s-chance
+  padding-bottom: 30px
+  margin-top: 85px
+  .helmet 
+    margin-top: 125px
+    p
+      font-size: 65px
+      padding-left: 240px
+  .clock-2
+    background-color: #fff
+  .sale-callback .sale-list
+    width: 40%
+    height: 100px
+  .sale-callback .callback
+  .call_me
+    text-align: center
+    margin-top: 50px
+    margin-bottom: 20px
+    p
+      text-align: center
+      font-size: 24px
+      font-weight: 900
+      line-height: 2.08
+      letter-spacing: 0.6px
+      color: $dark
+      z-index: 9999
+      position: relative
+      text-decoration: underline
+      border-bottom: 2px solid $dark
+      display: inline
+  .iwantsite
+    width: 100%
+    text-align: center
+    margin-top: 40px
+    position: relative
+    z-index: 99999
+    a
+      background-color: $dark
+      padding: 1px 20px 3px 20px
+      display: inline-block
+      font-size: 19px
+      font-weight: 900
+      letter-spacing: 0.48px
+      border-radius: 10px
+      span
+        color: #fff
+        border-bottom: 2px solid #fff
+        &.yellow
+          color: $yellow
+          border-bottom: 2px solid $yellow
+.overley
+  position: relative
+  &::before
+  	content: ""
+  	position: absolute
+  	left: 0
+  	right: 0
+  	width: 100%
+  	height: 100%
+  	background-color: $yellow
+  	opacity: .75
+.btn-top
+  display: none
+  z-index: 999 
+  width: 50px
+  height: 50px
+  position: fixed
+  bottom: 20px
+  right: 20px
+  &.active
+    display: block
+
+
+      
+
+  
+    
+
+  
+   
+
+
+
+    
+
+  
+    
+   
+      
+
+   
+    
+
+
+
+@import "media" // Всегда в конце
