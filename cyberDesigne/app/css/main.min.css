@@ -1,17 +1,9 @@
 @font-face {
-  font-family: "roboto-example";
+  font-family: "share-example";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "roboto-example";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/RobotoBold/RobotoBold.eot");
-  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  src: url("../fonts/share/share.eot");
+  src: url("../fonts/share/share.eot?#iefix") format("embedded-opentype"), url("../fonts/share/share.woff") format("woff"), url("../fonts/share/share.ttf") format("truetype");
 }
 
 html {
@@ -4481,7 +4473,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.65;
-  font-family: "roboto-example", sans-serif;
+  font-family: "share-example", sans-serif;
   overflow-x: hidden;
   opacity: 1;
 }
