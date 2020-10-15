@@ -4469,7 +4469,7 @@ html, body {
 }
 
 body {
-  font-size: 16px;
+  font-size: 10px;
   min-width: 320px;
   position: relative;
   line-height: 1.65;
@@ -4502,6 +4502,20 @@ section, header {
 ::selection {
   background-color: orange;
   color: #fff;
+}
+
+body.ishome {
+  background-color: black;
+  background: url(../img/fon.jpg) center no-repeat;
+  background-size: cover;
+  height: 7560px;
+}
+
+header {
+  background: url(../img/header.png) center no-repeat;
+  background-size: contain;
+  background-position: top;
+  min-height: 1149px;
 }
 
 /*==========  Desktop First  ==========*/
@@ -4554,4 +4568,11 @@ section, header {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1920px) {
+  header {
+    background-size: cover;
+  }
 }
