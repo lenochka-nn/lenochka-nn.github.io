@@ -50,7 +50,7 @@ gulp.task('js', function() {
 		//'app/libs/microplugin/microplugin.js', // опция для selectize
 		//'app/libs/sifter/sifter.js', // опция для selectize
 		//'app/libs/selectize/selectize.min.js', // выбор опций в форме
-		//'app/js/common.js'
+		'app/js/common.js'
 		// Всегда в конце
 		]) 
 	.pipe(concat('scripts.min.js'))
