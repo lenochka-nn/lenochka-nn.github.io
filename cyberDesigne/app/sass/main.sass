@@ -100,7 +100,7 @@ html, body
 
 body
 	font-size: 10px
-	min-width: 320px
+	min-width: 350px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
@@ -152,15 +152,6 @@ header
           color: #2e3333
       a:first-child
         padding-left: 35px
-    p
-      position: absolute
-      top: 10%
-      left: 50%
-      transform: translateX(-50%)
-      text-align: center
-      font-size: 1.6em
-      margin: 0
-      line-height: 1
     .tel
       display: inline-block
       float: right
@@ -187,10 +178,21 @@ header
           text-decoration: none
           &:hover
             text-decoration: underline
+    .header-logo
+      text-align: center
+      p
+        position: absolute
+        top: 10%
+        left: 50%
+        transform: translateX(-50%)
+        text-align: center
+        font-size: 1.6em
+        margin: 0
+        line-height: 1
   .exit
     position: absolute
     right: 6%
-    z-index: 9999
+    z-index: 99
     a
       color: #3b3b3b
       text-decoration: none
@@ -199,11 +201,20 @@ header
       &:hover
         text-decoration: underline
   .founder
-    margin-top: 17.5%
+    background: url(../img/founder.png) center no-repeat
+    width: 450px
+    height: 270px
+    background-size: 90%
+    margin-top: 8%
+    //margin-top: 100px
+    margin-left: 25%
     color: #000
     position: relative
     p
       line-height: 1.2
+      position: absolute
+      bottom: 40px
+      right: 20px
     span
       color: #2e3333
       margin-top: 5px
@@ -211,7 +222,7 @@ header
   .year
     position: absolute
     right: 0
-    top: 28%
+    top: 26%
     font-size: 3.5em
     letter-spacing: 30px
   .deadline
@@ -222,7 +233,7 @@ header
     background-size: 100%
     position: absolute
     float: right
-    bottom: -50px
+    bottom: 0
     right: 8%
     a.deadline-btn
       width: 350px
@@ -231,10 +242,9 @@ header
       background-size: 100%
       background-size: cover
       position: absolute
-      z-index: 9999
+      z-index: 99
       right: 25px
       bottom: 75px
-      //cursor: pointer !important
     .timer
       position: absolute
       right: 17%
@@ -243,7 +253,6 @@ header
       color: #6fe9e9
   .header-content
     position: relative
-
 
 
 

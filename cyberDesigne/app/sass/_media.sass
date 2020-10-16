@@ -4,34 +4,182 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.wrapper
+  		position: relative
+  		overflow-x: hidden
+	.menu
+		position: fixed
+		right: 0
+		top: 0
+		z-index: 999
+		height: 100vh
+		display: flex
+		width: 400px
+		//align-items: center
+		justify-content: center
+		background-color: #3b3b3b
+		transition: 0.5s
+		transform: translateX(100%)
+	.menu_active
+		transform: translateX(0%)
+	.menu-list
+		display: flex
+		justify-content: space-around
+		align-items: center
+		height: 50%
+		width: 100%
+		flex-direction: column
+	.menu-btn
+		display: flex
+		flex-direction: column
+		position: absolute
+		left: -20px
+		top: 10px
+		span
+			width: 9px
+			height: 5px
+			margin-top: 5px
+			background-color: #0f0f0f
+	header .top-line nav
+		ul
+			margin: 0
+			padding: 0 
+		li
+			display: block
+			padding: 20px 0 20px 30% 
+			width: 100%
+			+mt(.25s)
+			&:hover
+				background: $accent
+				a
+					color: #000
+					text-decoration: none
+	header .top-line nav
+		right: 0
+		top: 100px
+		li a
+			color: #fff
+			+mt(.25s)
+			z-index: 9999999
+	header .founder
+		display: none
+	header .deadline
+		position: relative
+		margin-top: 10%
+		//transform: translateY(60%)
 
-
+		
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 991px)
+	header .deadline
+		background: url(../img/deadline-mob.png) center no-repeat
+		right: 50%
+		transform: translateX(50%)
+		margin-top: 8%
+		a.deadline-btn
+			background: url(../img/dead-btn-mob.png) center no-repeat
+		.timer
+			bottom: 30px
+			font-size: 2.3em
+			right: 110px
+	header .header-content
+		margin-top: 23%
+		color: #000
+		.tk
+			margin-left: 8%
+		.year
+			display: none
+	
+
+      		
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-	/**/
-
+	.bg1
+		background-position: -10px -100px
+	.tk
+		margin-left: 10%
+		.kt p
+			font-size: 1.6em
+	
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 576px)
+	.bg1
+		background-position: 0 0
+	header
+  		background: url(../img/bg-mob.png) center no-repeat
+	header
+		background-size: cover
+	header .top-line
+		padding: 0
+	header .top-line .header-logo
+		width: 100%
+		padding-left: 20%
+		text-align: left
+		.header-logo-body
+		p
+			position: static
+			display: inline-block
+			transform: translateX(0%)
+			vertical-align: middle
+			text-align: left
+			padding-left: 10px
+			font-size: 1.7em
+	header .top-line .tel
+		height: 80px
+		position: static
+		padding: 0
+		width: 100%
+		text-align: center
+		background: url(../img/tel-bg-mob.png) center no-repeat
+		background-size: 100%
+		line-height: 80px
+		font-size: 3.1em
+	.menu-btn
+		left: -50px 
+		top: 20px	
+		span
+			margin-top: 10px
+	header .header-content
+		margin-top: 0
+	header .header-content .tk
+		margin-left: 0
+	.tk .kt p
+		padding-left: 10px	
+		font-size: 2.4em
+	.kt
+		margin-top: 90px	
+	header .deadline
+		margin-top: 480px
+	.menu
+		width: 300px		
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width : 400px)
+	header .deadline
+		width: 300px
+	header .deadline a.deadline-btn
+		width: 300px
+	header .top-line .tel
+		font-size: 2.5em
+	header .deadline a.deadline-btn
+		right: 0
+	header .deadline .timer
+		font-size: 2.3em
+		right: 60px
+	.menu
+		width: 280px
 
 
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
+@media only screen and (min-width : 577px)
+	header .header-logo-img
+		display: none
 
 
 /* Extra Small Devices, Phones */
@@ -54,5 +202,13 @@
 	/**/
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px)
-	/**/
+	header .founder
+		margin-left: 32%
+		margin-top: 13%
+@media only screen and (min-width : 2500px)
+	header .founder
+		display: none
+	header .deadline
+		display: none
+
 		
