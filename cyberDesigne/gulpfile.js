@@ -46,7 +46,7 @@ gulp.task('js', function() {
 		//'app/libs/jQuery.mmenu/jquery.mmenu.all.js',
 		//'app/libs/equalheights/equalHeights.js',
 		//'app/libs/fotorama/fotorama.js',
-		//'app/libs/slick/slick.min.js',
+		'app/libs/slick/slick.min.js',
 		//'app/libs/microplugin/microplugin.js', // опция для selectize
 		//'app/libs/sifter/sifter.js', // опция для selectize
 		//'app/libs/selectize/selectize.min.js', // выбор опций в форме

@@ -40,6 +40,8 @@
 			height: 5px
 			margin-top: 5px
 			background-color: #0f0f0f
+	header .top-line .header-logo p
+		top: 30px
 	header .top-line nav
 		ul
 			margin: 0
@@ -61,35 +63,72 @@
 			color: #fff
 			+mt(.25s)
 			z-index: 9999999
+			font-size: 2em
 	header .founder
 		display: none
+	header .top-line .tel
+		top: -15px
 	header .deadline
 		position: relative
 		margin-top: 10%
-		//transform: translateY(60%)
-
+	.s-benefit .benefit-block .benefit-item
+		padding-left: 95px
+	// .s-benefit
+	// 	padding: 7% 0
+	header .deadline
+		//background: url(../img/deadline-mob.png) center no-repeat
+		right: 60%
+		transform: translateX(100%)
+		margin-top: 17%
+		background-size: 80%
+		a.deadline-btn
+			//background: url(../img/dead-btn-mob.png) center no-repeat
+			background-size: 80%
+		.timer
+			bottom: 30px
+			font-size: 2.3em
+			right: 110px
+	
 		
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	header .top-line .tel
+		top: 0
 	header .deadline
-		background: url(../img/deadline-mob.png) center no-repeat
-		right: 50%
-		transform: translateX(50%)
-		margin-top: 8%
+		//background: url(../img/deadline-mob.png) center no-repeat
+		//right: 50%
+		//transform: translateX(100%)
+		margin-top: 20%
 		a.deadline-btn
-			background: url(../img/dead-btn-mob.png) center no-repeat
+			//background: url(../img/dead-btn-mob.png) center no-repeat
 		.timer
 			bottom: 30px
 			font-size: 2.3em
 			right: 110px
 	header .header-content
-		margin-top: 23%
+		margin-top: 5%
 		color: #000
 		.tk
-			margin-left: 8%
+			//margin-left: 8%
+			font-size: .8em
 		.year
 			display: none
-	
+	.s-benefit .benefit-block .benefit-item
+		padding-left: 27px
+		text-align: center
+		margin: 0 auto
+		h3
+			min-width: 200px
+		.benefit-img
+			margin-left: 25%
+	.slick-arrow
+		position: absolute
+	.next
+		//right: 30%
+		bottom: -90px
+	.prev
+		//left: 30%
+		bottom: -90px
 
       		
 
@@ -99,9 +138,15 @@
 	.bg1
 		background-position: -10px -100px
 	.tk
-		margin-left: 10%
+		//margin-top: 30px
 		.kt p
-			font-size: 1.6em
+			margin-top: 70px
+			//font-size: 1.6em
+	header .deadline
+		right: 70%
+		margin-top: 30%
+	header .top-line .header-logo p
+		top: 55px
 	
 
 /* Extra Small Devices, Phones */
@@ -154,7 +199,16 @@
 	header .deadline
 		margin-top: 480px
 	.menu
-		width: 300px		
+		width: 300px
+	.s-benefit
+		margin-top: 200px
+	header .deadline
+		background: url(../img/deadline-mob.png) center no-repeat
+		right: 50%
+		transform: translateX(50%)
+		//margin-top: 20%
+		a.deadline-btn
+			background: url(../img/dead-btn-mob.png) center no-repeat		
 
 
 /* Custom, iPhone Retina */
@@ -201,14 +255,23 @@
 @media only screen and (min-width : 1200px)
 	/**/
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1920px)
+@media only screen and (min-width : 1950px)
 	header .founder
 		margin-left: 32%
 		margin-top: 13%
+	header .top-line .tel, header .exit
+		right: 5%
+	header .top-line .social-link
+		margin-left: 5%
 @media only screen and (min-width : 2500px)
 	header .founder
 		display: none
 	header .deadline
 		display: none
+@media screen and (max-width : 1300px) and (min-width : 1201px)
+	header .deadline
+		right: 0
+		
+
 
 		
